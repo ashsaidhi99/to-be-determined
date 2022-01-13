@@ -5,12 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <title>Document</title>
   </head>
   <body>
     <!-- navbar -->
-
+    <nav class="uk-navbar-container" uk-navbar>
+      <div class="uk-navbar-left">
+          <ul class="uk-navbar-nav">
+              <li class="uk-active"><a href="#">Active</a></li>
+              <li>
+                  <a href="#">Parent</a>
+                  <div class="uk-navbar-dropdown">
+                      <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li class="uk-active"><a href="#">Active</a></li>
+                          <li><a href="#">Item</a></li>
+                          <li><a href="#">Item</a></li>
+                      </ul>
+                  </div>
+              </li>
+              <li><a href="#">Item</a></li>
+          </ul>
+      </div>
+  </nav>
     <!-- hero -->
     <section class="hero is-large is-info">
       <div class="hero-body">
@@ -67,5 +85,7 @@
         </div>
       </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/js/uikit-icons.min.js"></script>
   </body>
 </html>
