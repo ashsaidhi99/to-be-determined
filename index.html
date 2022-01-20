@@ -7,28 +7,32 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
-    <title>Document</title>
+    <title>Artsy</title>
   </head>
+
   <body>
     <!-- navbar -->
-    <nav class="uk-navbar-container" uk-navbar>
-      <div class="uk-navbar-left">
-          <ul class="uk-navbar-nav">
-              <li class="uk-active"><a href="#">Active</a></li>
-              <li>
-                  <a href="#">Parent</a>
-                  <div class="uk-navbar-dropdown">
-                      <ul class="uk-nav uk-navbar-dropdown-nav">
-                          <li class="uk-active"><a href="#">Active</a></li>
-                          <li><a href="#">Item</a></li>
-                          <li><a href="#">Item</a></li>
-                      </ul>
-                  </div>
-              </li>
-              <li><a href="#">Item</a></li>
-          </ul>
+    <nav class="uk-navbar-container uk-margin" uk-navbar>
+      <div class="nav-overlay uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="#">Logo</a>
+        <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="#">Sign In</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
       </div>
-  </nav>
+      <div class="nav-overlay uk-navbar-right">
+        <a class="uk-navbar-toggle" uk-search-icon uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+      </div>
+      <div class="nav-overlay uk-navbar-left uk-flex-1" hidden>
+        <div class="uk-navbar-item uk-width-expand">
+          <form id="search-form" class="uk-search uk-search-navbar uk-width-1-1" data-uk-search>
+            <input id="search-term" class="uk-search-input uk-search-field" type="search" placeholder="Search" autofocus="true" />
+          </form>
+        </div>
+        <a class="uk-navbar-toggle" uk-close uk-toggle="target: .nav-overlay; animation: uk-animation-fade" href="#"></a>
+      </div>
+    </nav>
+
     <!-- hero -->
     <section class="hero is-large is-info">
       <div class="hero-body">
@@ -39,53 +43,22 @@
 
     <!-- art display -->
     <section>
-      <div class="tile is-ancestor">
-        <div class="tile is-vertical is-8">
-          <div class="tile">
-            <div class="tile is-parent is-vertical">
-              <article class="tile is-child notification is-primary">
-                <p class="title">Vertical...</p>
-                <p class="subtitle">Top tile</p>
-              </article>
-              <article class="tile is-child notification is-warning">
-                <p class="title">...tiles</p>
-                <p class="subtitle">Bottom tile</p>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification is-info">
-                <p class="title">Middle tile</p>
-                <p class="subtitle">With an image</p>
-                <figure class="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png" />
-                </figure>
-              </article>
-            </div>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-danger">
-              <p class="title">Wide tile</p>
-              <p class="subtitle">Aligned with the right tile</p>
-              <div class="content">
-                <!-- Content -->
-              </div>
-            </article>
-          </div>
+      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+        <div class="uk-card-media-left uk-cover-container">
+          <img src="" alt="" uk-cover />
+          <canvas width="600" height="400"></canvas>
         </div>
-        <div class="tile is-parent">
-          <article class="tile is-child notification is-success">
-            <div class="content">
-              <p class="title">Tall tile</p>
-              <p class="subtitle">With even more content</p>
-              <div class="content">
-                <!-- Content -->
-              </div>
-            </div>
-          </article>
+        <div>
+          <div class="uk-card-body">
+            <h3 class="uk-card-title">Media Left</h3>
+            <p id="search-info"></p>
+          </div>
         </div>
       </div>
     </section>
+
+    <script src="/assets/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/js/uikit.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.10.0/dist/js/uikit-icons.min.js"></script>
   </body>
 </html>
